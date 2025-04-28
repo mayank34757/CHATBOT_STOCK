@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Chat AI</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+    <header>
+        <h1>Stock Chat AI</h1>
+        <p>Created by Gautam, Mayank, and Pankaj</p>
+    </header>
+    <div class="button-container">
+        <button id="thirtyDayChartBtn" disabled>30-Day Chart</button>
+        <button id="realTimeChartsBtn" disabled>Real-Time Charts</button>
+        <button id="buySellSuggestionBtn" disabled>Buy/Sell Suggestion</button>
+    </div>
+    <div class="container">
+        <div class="chat-section">
+            <div id="chatBox"></div>
+            <div class="input-container">
+                <input type="text" id="chatInput" placeholder="Ask about a stock (e.g., TCS.NS stock details, AAPL stock details)">
+                <button id="sendBtn">Send</button>
+            </div>
+        </div>
+        <div class="chart-section">
+            <canvas id="stockChart"></canvas>
+            <canvas id="stockLineChart"></canvas>
+        </div>
+    </div>
+    <div id="loading" style="display: none;">Loading...</div>
+    <script src="script.js"></script>
+</body>
+</html>
